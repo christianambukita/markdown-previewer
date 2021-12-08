@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #131516;
+}
+
+#container{
+    display: flex;
+    width: 100%;
+    margin-top: 15vh;
+    justify-content:center;
+}
+
+
+.content-box{
+    background-color:#131516;
+    color: rgb(255, 240, 209);
+    width: 45vw;
+    height: 70vh;
+    border: 1px solid lightgray;
+    margin: 0 5px 0 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#preview{
+    padding: 0px 8px 0px 8px;
+
+}
+
+#editor{
+    width: 100;
+    resize: none;
+    border-top:none;
+    padding-top: 10px;
+}
+
+#editor:focus{
+    outline:none;
+}
+
+.navbar{
+    color:lightgray;
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    width: 45vw;
+    list-style: none;
+    padding:0;
+    margin:0 0 0 5px;
+    align-items: flex-end;
+    border-bottom: 1px solid lightgray;
+    position:relative;
+}
+
+.navbar::after{
+    content: '';
+    display: block;
+    position:absolute;
+    width:53px;
+    left: 1px;;
+    bottom: -1px;;
+    border-bottom: 1px solid #131516;
+}
+
+.navbar li{
+    padding: 0 4px 0 4px;
+    margin-right: 2px;
+    height: 1.5em;
+    line-height: 1.5em;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow:hidden;
+    border: 1px solid lightgray;
+    border-bottom: none;
+    white-space: nowrap;
+    cursor:pointer;
+}
+
+.input{
+    flex: 0 0 55px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.html-box{
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
