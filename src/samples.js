@@ -179,7 +179,8 @@ const IMAGES = `![Alt text](/path/to/img.jpg)
 const Samples = {
   'Headers': HEADERS,
   'Quotes': BLOCK_QUOTES,
-  'Lists': LISTS, 'Code': CODE,
+  'Lists': LISTS, 
+  'Code': CODE,
   'Hr': HORIZONTAL,
   'Links': LINKS,
   'Emphasis': EMPHASIS,

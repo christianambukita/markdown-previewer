@@ -1,4 +1,4 @@
-import Navbar from './Navbar'
+import Navbar, { INPUT } from './Navbar'
 import {Samples} from './samples'
 import './styles/Editor.css'
 import {useEffect, useState} from 'react'
@@ -6,22 +6,28 @@ import {useEffect, useState} from 'react'
 function Editor({textValue, setTextValue}){
 
     const [editorInput, setInput] = useState(textValue)
+    const tabs = Object.keys(Samples)
 
     function handleOnChange(event){
         setInput(event.target.value);
     }
 
+    function handleClick(key){
+        key === INPUT ? setTextValue(editorInput) : setTextValue(Samples[key]);
+    }
+
     useEffect(()=>{
         setTextValue(editorInput);
-    }, [editorInput]);
+    }, [editorInput, setTextValue]);
 
     return(
         <div>
             <Navbar 
-                tabs={Samples} 
-                setTextValue={setTextValue}
-                editorInput={editorInput}
+                tabs={tabs} 
                 setInput={setInput}
+                handleClick={handleClick}
+                input={true}
+                id="navbar-0"
             />
             <textarea 
                 id='editor'

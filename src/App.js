@@ -3,16 +3,12 @@ import './styles/App.css'
 import Editor from './Editor'
 import Preview from './Preview'
 import {INIT_STATE} from './samples'
-import fccTest from './fCC_test'
 //const MARK_URL = 'https://cdnjs.cloudflare.com/ajax/libs/marked/2.0.0/marked.min.js'
 
 
 function App() {
 
   const [textValue, setTextValue] = useState(INIT_STATE);
- 
-  //Test from fCC project
-  useEffect(fccTest, []);
 
   return (
     <div className="App">

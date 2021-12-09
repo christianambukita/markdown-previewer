@@ -3,7 +3,8 @@
 }
 
 body{
-    background-color: #131516;
+    --background-color: #131516;
+    background-color: var(--background-color);
 }
 
 #container{
@@ -15,11 +16,12 @@ body{
 
 
 .content-box{
-    background-color:#131516;
+    background-color:var(--background-color);
     color: rgb(255, 240, 209);
     width: 45vw;
     height: 70vh;
     border: 1px solid lightgray;
+    border-top:none;
     margin: 0 5px 0 5px;
     overflow: scroll;
     overflow-x: hidden;
@@ -33,7 +35,6 @@ body{
 #editor{
     width: 100;
     resize: none;
-    border-top:none;
     padding-top: 10px;
 }
 
@@ -54,17 +55,7 @@ body{
     position:relative;
 }
 
-.navbar::after{
-    content: '';
-    display: block;
-    position:absolute;
-    width:53px;
-    left: 1px;;
-    bottom: -1px;;
-    border-bottom: 1px solid #131516;
-}
-
-.navbar li{
+.navbar > li{
     padding: 0 4px 0 4px;
     margin-right: 2px;
     height: 1.5em;
@@ -76,6 +67,19 @@ body{
     border-bottom: none;
     white-space: nowrap;
     cursor:pointer;
+    bottom: 0;
+}
+.selection{
+    border-radius: 0px !important;
+    height: 0px !important;
+    width: calc( var(--selection-width) - 2px);
+    padding: 0 !important;
+    margin: 0 !important;
+    bottom: -1px !important;
+    left: calc( var(--selection-left) + 1px);
+    position: absolute;
+    border: none !important;
+    border-bottom: 1px solid var(--background-color) !important;
 }
 
 .input{
