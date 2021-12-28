@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import './styles/App.css'
 import Editor from './Editor'
 import Preview from './Preview'

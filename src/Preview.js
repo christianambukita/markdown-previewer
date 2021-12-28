@@ -1,4 +1,3 @@
-import './styles/Preview.css'
 import cleaner from 'clean-html'
 import {useState, useEffect} from 'react'
 import {INIT_STATE} from './samples'
@@ -32,13 +31,13 @@ function Preview({textValue}){
     }
 
     function handleClick(tab){
-        if(tab === tabs.Preview) setPreviewOption(true)
-        if(tab === tabs.HTML) setPreviewOption(false)
+        if(tab === tabs[0]) setPreviewOption(true)
+        if(tab === tabs[1]) setPreviewOption(false)
     }
 
     return(
         
-        <div>
+        <div id="preview-container" className="section-container">
             <Navbar tabs={tabs} handleClick={handleClick} input={false} id="navbar-1" />
             {previewOption ? <div 
                     id='preview'

@@ -43,12 +43,10 @@ function Navbar({tabs, handleClick, input, id}){
     },[])
 
     return(
-        <div>
-            <ul id={id} className="navbar">
-                <li className="selection" style={getSelectionStyle()}></li>
-                {liTabs}
-            </ul>
-        </div>
+        <ul id={id} className="navbar">
+            <li className="selection" style={getSelectionStyle()}></li>
+            {liTabs}
+        </ul>
     )
 }
 

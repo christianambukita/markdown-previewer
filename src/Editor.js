@@ -1,6 +1,5 @@
 import Navbar, { INPUT } from './Navbar'
 import {Samples} from './samples'
-import './styles/Editor.css'
 import {useEffect, useState} from 'react'
 
 function Editor({textValue, setTextValue}){
@@ -21,7 +20,7 @@ function Editor({textValue, setTextValue}){
     }, [editorInput, setTextValue]);
 
     return(
-        <div>
+        <div id="editor-container" className="section-container">
             <Navbar 
                 tabs={tabs} 
                 setInput={setInput}
