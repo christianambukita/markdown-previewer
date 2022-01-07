@@ -177,14 +177,14 @@ const IMAGES = `![Alt text](/path/to/img.jpg)
 [id]: url/to/image  "Optional title attribute"`;
 
 const Samples = {
-  'Headers': HEADERS,
-  'Quotes': BLOCK_QUOTES,
-  'Lists': LISTS, 
-  'Code': CODE,
-  'Hr': HORIZONTAL,
-  'Links': LINKS,
-  'Emphasis': EMPHASIS,
-  'Images': IMAGES
+	Headers: HEADERS,
+	Quotes: BLOCK_QUOTES,
+	Lists: LISTS,
+	Code: CODE,
+	Hr: HORIZONTAL,
+	Links: LINKS,
+	Emphasis: EMPHASIS,
+	Images: IMAGES,
 };
 
-export {INIT_STATE, Samples};
+export { INIT_STATE, Samples };
